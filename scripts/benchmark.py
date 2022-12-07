@@ -263,4 +263,6 @@ if __name__ == "__main__":
         # https://github.com/huggingface/diffusers/pull/440
         "backend": ("pytorch", "onnx") if device.type == "cpu" else ("pytorch",),
     }
+    print(grid)
+    print(device)
     run_benchmark_grid(grid, n_repeats=args.repeats, num_inference_steps=args.steps)
